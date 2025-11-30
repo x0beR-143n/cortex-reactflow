@@ -1,0 +1,34 @@
+const CustomNode = ({ data = {} }) => {
+  const {
+    title = 'start-node',
+    subtitle = 'Start Node',
+    icon = 'Fi',
+    borderColor = 'border-cyan-400'
+  } = data;
+
+  return (
+    <div className="relative">
+      {/* Handles for connections */}
+      <Handle type="target" position={Position.Top} className="opacity-0" />
+      <Handle type="source" position={Position.Bottom} className="opacity-0" />
+      <Handle type="source" position={Position.Right} className="opacity-0" />
+      <Handle type="target" position={Position.Left} className="opacity-0" />
+      
+      {/* Node content */}
+      <div className={`bg-gray-900 border-2 ${borderColor} rounded-lg px-4 py-3 min-w-48`}>
+        <div className="flex items-center gap-3">
+          {/* Icon */}
+          <div className="w-8 h-8 bg-gray-700 border border-gray-600 rounded flex items-center justify-center">
+            <span className="text-white text-sm font-semibold">{icon}</span>
+          </div>
+          
+          {/* Content */}
+          <div>
+            <div className="text-white text-sm font-medium">{title}</div>
+            <div className="text-gray-400 text-xs">{subtitle}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
