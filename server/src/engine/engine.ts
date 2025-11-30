@@ -1,7 +1,7 @@
 // engine/engine.ts
-import { CreateEdgeDto } from "src/edges/dto/create-edge.dto";
-import { CreateFlownodeDto } from "src/flownode/dto/create-flownode.dto";
-import { FlowNodeType } from "src/flownode/flownode.enum";
+import { CreateEdgeDto } from "../edges/dto/create-edge.dto";
+import { CreateFlownodeDto } from "../flownode/dto/create-flownode.dto";
+import { FlowNodeType } from "../flownode/flownode.enum";
 import { runScriptNode, runConditionNode, runAINode } from "./nodeRunner";
 
 type JsonObj = Record<string, unknown>;
