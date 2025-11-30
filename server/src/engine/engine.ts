@@ -78,7 +78,7 @@ export async function runFlow(
           onEvent({ type: "node:succeeded", nodeId, nodeType, step: steps, data: { ...data, __branch: ok } });
 
           current = ensureNextOrThrow(
-            chooseNextNodeConditional(nodes, edges, nodeId, ok ? "true" : "false"),
+            chooseNextNodeConditional(nodes, edges, nodeId, ok ? "ttrue" : "false"),
             nodeId
           );
           continue;
